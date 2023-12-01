@@ -1,6 +1,8 @@
 const express =require("express");
-require("dotenv").config();
 const app=express();
+const cors=require("cors");
+const {connection} =require("./config/db")
+require("dotenv").config();
 
 
 app.get("/",(req,res)=>{
@@ -8,6 +10,11 @@ app.get("/",(req,res)=>{
 })
 
 app.listen(process.env.port,async()=>{
-
+try{
+await connection
+console.log("connected to the Database!");
+}catch(error){
+    console.log('Database connection failed!');
+}
 console.log(`server is runniing at the port ${process.env.port}`);
 })
