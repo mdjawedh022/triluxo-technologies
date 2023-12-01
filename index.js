@@ -28,3 +28,4 @@ app.listen(process.env.port, async () => {
   }
   console.log(`server is runniing at the port ${process.env.port}`);
 });
+

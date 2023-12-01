@@ -21,7 +21,7 @@ putRouter.put("/update/:id", async (req, res) => {
 
     // Save the updated book
     await existBook.save();
-    res.send({ msg: "Book updated successfully" });
+    res.send({ msg: "Book updated successfully", book: existBook });
   } catch (err) {
     res.send({ msg: "Intternal server error" });
   }
