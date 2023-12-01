@@ -20,4 +20,4 @@ postRouter.post("/add", async (req, res) => {
   }
 });
 
-module.exports=postRouter;
+module.exports = postRouter;
