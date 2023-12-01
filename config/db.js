@@ -3,6 +3,6 @@ require("dotenv").config();
 
 const connection =mongoose.connect(process.env.url);
 
-module.export={
+module.exports={
     connection
 };
